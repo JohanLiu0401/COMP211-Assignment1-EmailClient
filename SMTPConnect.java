@@ -61,7 +61,7 @@ public class SMTPConnect {
 	   sendCommand() to do the dirty work. Do _not_ catch the
 	   exception thrown from sendCommand(). */
     	sendCommand("MAIL FROM: "+mailmessage.Sender+"\r\n",250);
-    	sendCommand("RCPT TO: "+mailmessage.Sender+"\r\n",250);
+    	sendCommand("RCPT TO: "+mailmessage.Recipient+"\r\n",250);
     	sendCommand("DATA\r\n",354);
     	sendCommand(mailmessage.Headers+mailmessage.Body+CRLF+"."+CRLF,250);
 	/* Fill in */
